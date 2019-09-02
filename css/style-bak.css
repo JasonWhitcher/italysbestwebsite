@@ -1,0 +1,290 @@
+/*
+Style Sheet 
+Site        : Italy's Best
+Description : Portfolio site.
+Author      : Jason Whitcher
+*/
+/*
+scss variables
+*/
+/*
+Default resets
+*/
+body {
+  width: 97%;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  font-size: 22px;
+  color: #222222; }
+
+article {
+  margin: 2px; }
+
+@media screen and (min-width: 768px) {
+  article {
+    margin: 20px; } }
+a {
+  color: #5714cc; }
+  a:hover {
+    color: #ff8800; }
+
+input[type="button"],
+input[type="submit"] {
+  font-size: inherit;
+  background-color: #ff8800;
+  color: #222222;
+  margin: 0.2em 0;
+  padding: 0.2em 0.4em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none; }
+  input[type="button"]:hover,
+  input[type="submit"]:hover {
+    background-color: #19ff44; }
+
+/*
+Template: Header, Footer, Navigation
+*/
+header {
+  display: block;
+  height: 300px;
+  width: 100%;
+  position: relative; }
+  header:after {
+    content: ' ';
+    background-image: url("../images/header-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -60px;
+    background-attachment: fixed;
+    position: absolute;
+    top: -60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -1; }
+
+nav.ib-menu-main {
+  display: block;
+  height: 1.5em;
+  width: 100%;
+  /*position: fixed;
+  top: 0px;
+  left: 0px;*/ }
+  nav.ib-menu-main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: inherit; }
+    nav.ib-menu-main ul li {
+      width: 10em;
+      list-style-type: none; }
+      nav.ib-menu-main ul li a {
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        color: #5714cc; }
+        nav.ib-menu-main ul li a:hover {
+          color: #ff8800; }
+
+@media screen and (min-width: 768px) {
+  nav.ib-menu-main ul {
+    flex-direction: row;
+    justify-content: flex-end; } }
+.ib-menu-item-parent {
+  position: relative;
+  display: inline-block; }
+  .ib-menu-item-parent .ib-menu-sub {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1; }
+    .ib-menu-item-parent .ib-menu-sub ul {
+      display: flex;
+      flex-direction: column; }
+  .ib-menu-item-parent:hover nav.ib-menu-sub {
+    display: block;
+    position: relative; }
+
+.ib-dinning-award-container {
+  display: flex;
+  flex-basis: 200px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: solid gray;
+  border-width: 1px 0px; }
+  .ib-dinning-award-container .ib-dinning-award {
+    height: 100px;
+    width: 100px;
+    margin: 3px 5px;
+    background-repeat: no-repeat;
+    background-size: contain; }
+    .ib-dinning-award-container .ib-dinning-award:nth-of-type(1) {
+      background-image: url("../images/award-01.png"); }
+    .ib-dinning-award-container .ib-dinning-award:nth-of-type(2) {
+      background-image: url("../images/award-02.png"); }
+    .ib-dinning-award-container .ib-dinning-award:nth-of-type(3) {
+      background-image: url("../images/award-03.png"); }
+
+.ib-menu-footer {
+  background-color: #e6e6e6; }
+  .ib-menu-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 4em;
+    margin: 0px;
+    padding-left: 0px; }
+    .ib-menu-footer ul li {
+      width: 15em;
+      list-style-type: none; }
+      .ib-menu-footer ul li a {
+        display: inline-block;
+        width: 98%;
+        text-align: center;
+        text-decoration: none;
+        color: #5714cc; }
+        .ib-menu-footer ul li a:hover {
+          color: #ff8800; }
+
+@media screen and (min-width: 640px) {
+  .ib-menu-footer ul {
+    flex-direction: row; } }
+/*
+Content Styles
+*/
+.ib-home-content-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  width: 100%;
+  position: relative;
+  margin: 50px 0px;
+  text-align: center; }
+  .ib-home-content-part:after {
+    content: ' ';
+    background-image: url("../images/home-pic-01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -1; }
+  .ib-home-content-part * {
+    margin: 0px auto; }
+  .ib-home-content-part ul {
+    list-style: none; }
+    .ib-home-content-part ul li {
+      padding: 15px; }
+
+#ib-home-were-great:after {
+  background-image: url("../images/home-pic-01.jpg"); }
+
+#ib-home-family-experience:after {
+  background-image: url("../images/home-pic-02.jpg"); }
+
+#ib-home-serving-since:after {
+  background-image: url("../images/home-pic-03.jpg"); }
+
+#ib-home-testimonials:after {
+  background-image: url("../images/home-pic-04.jpg"); }
+
+.ib-food-menu-item {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas: "title" "image" "price" "nutrition" "description";
+  grid-gap: 5px 5px; }
+  .ib-food-menu-item .ib-food-menu-item-part {
+    margin: 0;
+    padding: 0; }
+  .ib-food-menu-item .ib-food-menu-item-title {
+    grid-area: title;
+    align-self: end; }
+  .ib-food-menu-item .ib-food-menu-item-price {
+    grid-area: price; }
+  .ib-food-menu-item .ib-food-menu-item-nutrition {
+    grid-area: nutrition; }
+  .ib-food-menu-item .ib-food-menu-item-description {
+    grid-area: description; }
+  .ib-food-menu-item .ib-food-menu-item-image {
+    grid-area: image;
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .ib-food-menu-item #ib-food-menu-item-image-spaghetti {
+    background-image: url("../images/meal-01.jpg"); }
+  .ib-food-menu-item #ib-food-menu-item-image-fettuccine-alfredo {
+    background-image: url("../images/meal-02.jpg"); }
+
+@media screen and (min-width: 768px) {
+  .ib-food-menu-item {
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title          ." "price          image" "nutrition      image" "description    description"; } }
+/* Style for Address */
+/* Styles for Google map API */
+.ib-contact-google-map {
+  height: 400px;
+  width: 98%; }
+
+/* Styles for Contact Form */
+#ib-contact-form {
+  width: 100%; }
+  #ib-contact-form * {
+    display: block; }
+  #ib-contact-form label {
+    margin-top: 0.5em;
+    color: #666666; }
+  #ib-contact-form input[type='text'],
+  #ib-contact-form input[type='email'],
+  #ib-contact-form textarea {
+    width: 30em;
+    max-width: 100%;
+    margin-bottom: 0.5em;
+    padding: 3px;
+    border: #222222 1px solid;
+    border-radius: 3px;
+    font-size: 0.8em; }
+  #ib-contact-form textarea {
+    width: 100%;
+    height: 5em;
+    max-width: 640px; }
+  #ib-contact-form input[type="submit"] {
+    display: inline-block; }
+  #ib-contact-form #ib-contact-loader-message {
+    display: none; }
+  #ib-contact-form #ib-contact-ajax-message {
+    display: inline-block; }
+
+.ib-contact-loader-container {
+  display: block;
+  height: 1em;
+  width: 1em; }
+  .ib-contact-loader-container:after {
+    content: ' ';
+    display: block;
+    height: inherit;
+    width: inherit;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #ff8800;
+    border-color: #ff8800 transparent #ff8800 transparent;
+    animation: ib-contact-loader-animation 1.5s ease-in-out infinite; }
+
+@keyframes ib-contact-loader-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */
