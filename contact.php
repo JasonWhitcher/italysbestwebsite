@@ -81,7 +81,7 @@ Author      : Jason Whitcher
                 </form>
             </div>
             <div id="ib-map" class="ib-contact-part ib-contact-google-map">
-                
+                Google Map goes here.
             </div>
         </article>
         <footer>
@@ -106,11 +106,14 @@ Author      : Jason Whitcher
                     zoom: 17,
                     center: ib_location
                 });
-                var ib_marker = new google.maps.Marker({postition: ib_location, map: ib_map});
+                var ib_marker = new google.maps.Marker({
+                    position: ib_location,
+                    map: ib_map
+                });
             }
         </script>
-        <!--<script async defer
+        <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYAQhRYvT5pm_cR7sF0H3B00hiXnrY0zc&callback=initMap">
-        </script>-->
+        </script>
     </body>
 </html>

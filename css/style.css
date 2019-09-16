@@ -27,7 +27,8 @@ article {
 
 @media screen and (min-width: 768px) {
   article {
-    margin: 20px; } }
+    margin: 20px auto;
+    max-width: 1024px; } }
 a {
   text-decoration: none;
   color: #5714cc; }
@@ -144,15 +145,15 @@ nav.ib-menu-main {
       nav.ib-menu-main div#ib-menu-container ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
-        width: inherit; }
+        width: inherit;
+        background-color: #19ff44; }
         nav.ib-menu-main div#ib-menu-container ul > li {
           height: 1.5em;
           width: 22%;
-          text-align: center;
-          background-color: #19ff44; }
+          text-align: center; }
         nav.ib-menu-main div#ib-menu-container ul .ib-menu-item-parent:hover .ib-menu-sub {
           display: block; }
         nav.ib-menu-main div#ib-menu-container ul .ib-menu-item-parent .ib-menu-sub {
@@ -284,6 +285,9 @@ Content Styles
     grid-template-areas: "title          ." "price          image" "nutrition      image" "description    description"; } }
 /* Style for Address */
 /* Styles for Google map API */
+.ib-contact-part {
+  margin: 20px 0px; }
+
 .ib-contact-google-map {
   height: 400px;
   width: 98%; }

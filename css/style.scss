@@ -45,7 +45,8 @@ article {
 }
 @media screen and (min-width: $ib-tablet) {
     article {
-        margin: 20px;
+        margin: 20px auto;
+        max-width: $ib-desktop;
     }
 }
 a {
@@ -184,15 +185,16 @@ nav.ib-menu-main {
             ul {
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-end;
+                justify-content: space-between;
+                //justify-content: flex-end;
                 margin: 0;
                 padding: 0;
                 width: inherit;
+                background-color: $ib-color-secondary;
                 & > li {
                     height: 1.5em;
                     width: 22%;
                     text-align: center;
-                    background-color: $ib-color-secondary;
                 }
                 .ib-menu-item-parent {
                     &:hover .ib-menu-sub {
@@ -395,6 +397,9 @@ Content Styles
 }
 
 /* Styles for Google map API */
+.ib-contact-part {
+    margin: 20px 0px;
+}
 .ib-contact-google-map {
     height: 400px;
     width: 98%;
